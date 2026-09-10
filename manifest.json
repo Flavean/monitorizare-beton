@@ -1,0 +1,9 @@
+{
+  "name": "Monitorizare Beton",
+  "short_name": "Beton",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f2f4f7",
+  "theme_color": "#2563eb",
+  "lang": "ro"
+}

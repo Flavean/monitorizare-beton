@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Beton">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Monitorizare Beton</title>
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <h1>Monitorizare Beton</h1>
+
+      <label for="quantity">Cantitate beton</label>
+      <div class="quantity">
+        <input id="quantity" type="number" min="0.1" step="0.1" inputmode="decimal" placeholder="8.5">
+        <span>m³</span>
+      </div>
+
+      <button id="orderBtn" class="btn primary">AM DAT COMANDA</button>
+
+      <div id="active" class="active hidden">
+        <div class="info"><span>Comandă dată</span><strong id="orderedAt">--:--</strong></div>
+        <div class="info"><span>Cantitate</span><strong id="activeQty">--</strong></div>
+
+        <div id="timerBox" class="timer">
+          <span>Timp de așteptare</span>
+          <strong id="timer">0 min</strong>
+        </div>
+
+        <button id="arrivedBtn" class="btn success">A VENIT BETONUL</button>
+      </div>
+
+      <p id="message"></p>
+    </section>
+
+    <section class="card">
+      <div class="history-head">
+        <h2>Istoric</h2>
+        <button id="clearBtn" class="small">Șterge istoricul</button>
+      </div>
+      <div id="history"></div>
+    </section>
+
+    <p class="note">Datele sunt salvate în acest browser, pe telefonul tău.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
